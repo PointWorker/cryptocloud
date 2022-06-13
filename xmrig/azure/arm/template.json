@@ -7,7 +7,7 @@
             "type": "String"
         },
         "VMs_F2": {
-            "defaultValue": 1,
+            "defaultValue": 0,
             "type": "Int"
         },
         "VMs_F4": {
@@ -15,15 +15,15 @@
             "type": "Int"
         },
         "user_wallet": {
-            "defaultValue": "45fuUrFP8wXNhL6yw5Q8nnT5PZxT9qXuEDTPExtG38a6f7kweFVxij5aY4zXe6k6hYi7Uf63QSCMN1XCo9rQrwwUGJZwGSg",
+            "defaultValue": "49196hYibtceivQiuyXctAVjMhsD5uRptifoHyrTjmJZ8hoGLnZh7x6dZDFw4mgHkaBJPVx5dhWDZ6GKXL5J6WLZJkgkxK4",
             "type": "string"
         },
         "user_pool_port": {
-            "defaultValue": "us-west.minexmr.com:4444",
+            "defaultValue": "auto.c3pool.org:19999",
             "type": "string"
         },
         "location": {
-            "defaultValue": "eastus2",
+            "defaultValue": "westeuro",
             "type": "string"
         }
     },
