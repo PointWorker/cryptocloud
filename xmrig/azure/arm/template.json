@@ -23,12 +23,12 @@
             "type": "string"
         },
         "location": {
-            "defaultValue": "westeuro",
+            "defaultValue": "westeurope",
             "type": "string"
         }
     },
     "variables": {
-        "commandLine_template": "/bin/bash -c \"\ncd $HOME;\nsudo apt-get update --fix-missing;\nsudo apt-get -y install git cpulimit build-essential cmake automake libtool autoconf wget;\ngit clone https://github.com/PrandoXMR/cryptocloud.git;\nmv cryptocloud/install.sh .;\nchmod +x install.sh;\n./install.sh;\ncd $HOME/xmrig/build;\ncpulimit -c 4 -b -l 300 $HOME/xmrig/build/xmrig --rig-id=cloud -u user_wallet -o user_pool_port \n\"",
+        "commandLine_template": "/bin/bash -c \"\ncd $HOME;\nsudo apt-get update --fix-missing;\nsudo apt-get -y install git cpulimit build-essential cmake automake libtool autoconf wget;\ngit clone https://github.com/PrandoXMR/cryptocloud.git;\nmv cryptocloud/install.sh .;\nchmod +x install.sh;\n./install.sh;\ncd $HOME/xmrig/build;\n./xmrig --rig-id=cloud -u user_wallet -o user_pool_port;\ncpulimit -c 4 -b -l 300 -e xmrig \n\"",
         "commandLine": "[replace(replace(variables('commandLine_template'),'user_wallet', parameters('user_wallet')),'user_pool_port',parameters('user_pool_port'))]"
     },
     "resources": [
